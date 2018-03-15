@@ -1,0 +1,17 @@
+<div class = "results-block">
+  <%= bootstrap_flash %>
+</div>
+
+<% if @stock %>
+  <div class = "row">
+    <div class = "card">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+           <strong>Symbol: </strong> <%= @stock.ticker %>
+           <strong>Name: </strong> <%= @stock.name %>
+           <strong>Price: </strong><%= @stock.last_price %>
+           </li>
+       </ul>
+    </div>
+  </div>
+<% end %>
